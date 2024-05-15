@@ -10,8 +10,6 @@ fun main() {
 
     val recipeManager: RecipeManager = RecipeManager()
 
-//    val recipes: MutableList<Recipe> = recipeManager.getRecipeList()
-
     var isProgramOn : Boolean = true
 
     while (isProgramOn) {
@@ -20,6 +18,7 @@ fun main() {
 
         var userChoice: String = scanner.nextLine()
 
+//        Prints all the recipes
         if (userChoice.toInt() == 1) {
 
             val numberOfRecipes: Int = recipeManager.getRecipesCount()
@@ -30,6 +29,7 @@ fun main() {
                 println("$id ---> $name \n")
             }
 
+//            Prints the recipe from the given id
         } else if (userChoice.toInt() == 2) {
 
             println()
@@ -40,6 +40,7 @@ fun main() {
 
             if (recipe != null) recipe.printRecipeOverview()
 
+//            Prints the recipe from the given name
         } else if (userChoice.toInt() == 3) {
 
             println()
@@ -50,6 +51,7 @@ fun main() {
 
             if (recipe != null) recipe.printRecipeOverview()
 
+//            Enter a new recipe
         } else if (userChoice.toInt() == 4) {
 
             println()
@@ -122,6 +124,7 @@ fun main() {
 
             recipeManager.addRecipe(newRecipe)
 
+//            Delete the recipe with the given id from the recipes list
         } else if (userChoice.toInt() == 5) {
 
             println()
@@ -140,6 +143,7 @@ fun main() {
 
             }
 
+//            Stop the program
         } else if (userChoice.toInt() == 6) {
 
             isProgramOn = false
@@ -153,6 +157,7 @@ fun main() {
 
 }
 
+//Prints options available to the user
 fun showOptions() {
 
     println()

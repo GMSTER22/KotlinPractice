@@ -8,6 +8,7 @@ data class Recipe (
     val measures: List<String>
 ) {
 
+//    This function prints a formatted version of the Recipe object
     fun printRecipeOverview() {
         println("\nname = $name")
         println("category = $category")
